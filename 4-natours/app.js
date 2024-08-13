@@ -5,8 +5,7 @@ const userRouter = require('./routes/userRoutes');
 
 const app = express();
 
-//!Middlewares
-
+// Middlewares
 app.use(express.json());
 
 app.use((req, res, next) => {
@@ -22,17 +21,8 @@ app.use((req, res, next) => {
   next();
 });
 
-//!(3) ROUTES
-
+// (3) ROUTES
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
 
-//! START SERVER
-const port = 3000;
-app.listen(port, () => {
-  console.log(
-    `App running on port ${port}...`,
-  );
-});
-
-//handlers can also be called controllers
+module.exports = app;
