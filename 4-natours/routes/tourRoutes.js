@@ -3,6 +3,7 @@ const tourController = require('./../controllers/tourController.js');
 
 const router = express.Router();
 
+router.param('id', tourController.checkID);
 router
   .route('/')
   .get(tourController.getAllTours)
@@ -15,3 +16,5 @@ router
   .delete(tourController.deleteTour);
 
 module.exports = router;
+
+//param middleware -middleware that only runs for certain parameters .
