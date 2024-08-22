@@ -1,4 +1,4 @@
 # app 
 ### Deep Dive into nodejs backend development 
-Nodejs, Expressjs, RestfulApis, MongoDB with Mongoose & nginx
+Node js, Express js, RESTful APIs & MongoDB with Mongoose .
 
