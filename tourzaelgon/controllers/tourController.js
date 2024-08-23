@@ -42,7 +42,7 @@ exports.getAllTours = (req, res) => {
 exports.getTour = (req, res) => {
   console.log(req.params);
   const id = req.params.id * 1;
-  const tour = tours.find((el) => el.id === id);
+  // const tour = tours.find((el) => el.id === id); //!can unhiglight
 
   res.status(200).json({
     status: 'success',
