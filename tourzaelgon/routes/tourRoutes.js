@@ -1,9 +1,9 @@
 const express = require('express');
-const tourController = require('../controllers/tourController.js');
+const tourController = require('../controllers/tourController');
 
 const router = express.Router();
 
-router.param('id', tourController.checkID);
+// router.param('id', tourController.checkID);
 
 router
   .route('/')
@@ -18,4 +18,4 @@ router
 
 module.exports = router;
 
-//param middleware -middleware that only runs for certain parameters .
+// param middleware -middleware that only runs for certain parameters .
