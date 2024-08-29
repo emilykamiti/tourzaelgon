@@ -20,7 +20,7 @@ mongoose
     console.log('DBConnection successful');
   });
 
-const tourSchema = new mongoose.Shcema({
+const tourSchema = new mongoose.Schema({
   //specifying shcema
   name: {
     type: String,
@@ -38,7 +38,22 @@ const tourSchema = new mongoose.Shcema({
     required: [true, 'The tour must have a price'],
   },
 });
-const Tour = mongoose.node('Tour', tourSchema);
+const Tour = mongoose.model('Tour', tourSchema);
+
+const testTour = new Tour({
+  name: 'The Park Camper',
+  // rating: 4.7,
+  price: 997,
+});
+
+testTour
+  .save()
+  .then((doc) => {
+    console.log(doc);
+  })
+  .catch((err) => {
+    console.log('ERROR :', err);
+  });
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
