@@ -102,10 +102,10 @@ exports.getTourStats = catchAsync(async (req, res, next) => {
         maxPrice: { $max: '$price' },
       },
     },
+
     {
       $sort: { avgPrice: 1 },
     },
-    // { $match: { _id: { $ne: 'EASY' } } }, //!matching multiple times
   ]);
 
   res.status(200).json({
