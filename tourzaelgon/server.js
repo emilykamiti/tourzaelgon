@@ -4,7 +4,10 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 const app = require('./app');
 
-const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSWORD);
+const DB = process.env.DATABASE.replace(
+  '<PASSWORD>',
+  process.env.DATABASE_PASSWORD,
+);
 
 mongoose.set('strictQuery', false); //please watch out for this line
 
@@ -13,9 +16,8 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => {
-    console.log('DBConnection successful');
-  });
+  .then(() => console.log('DBConnection successful'))
+  .catch((err) => console.log('ERROR'));
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
