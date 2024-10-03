@@ -1,9 +1,13 @@
 const express = require('express');
 
 const userController = require('../controllers/userController');
+const authController = require('../controllers/authController');
 
 const router = express.Router();
 
+router.post('/signup', authController.signup); //has nothing to do with the rest philosophy
+
+//! these are in the rest format
 router
   .route('/')
   .get(userController.getAllUsers)
