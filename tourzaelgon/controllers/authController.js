@@ -27,6 +27,7 @@ exports.signup = catchAsync(async (req, res, next) => {
     },
   });
 });
+
 exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
 
@@ -47,4 +48,30 @@ exports.login = catchAsync(async (req, res, next) => {
     status: 'success',
     token,
   });
+});
+
+exports.protect = catchAsync(async (req, res, next) => {
+  // 1) Getting the token and checking if it's there
+
+  let token;
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith('Bearer')
+  ) {
+    token = req.headers.authorization.split(' ')[1];
+  }
+  console.log(token);
+
+  if (!token) {
+    return next(
+      new AppError('You are not logged in! Please log in to get access', 401),
+    );
+  }
+
+  //2) Verificatoin token token
+
+  //3) check if the user still exists
+
+  //4) check if user changes password after the jwt was issued
+  next();
 });
