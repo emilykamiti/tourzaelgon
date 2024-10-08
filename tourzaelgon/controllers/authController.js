@@ -73,6 +73,12 @@ exports.protect = catchAsync(async (req, res, next) => {
   console.log(decoded);
 
   //3) check if the user still exists
+  const freshUser = await User.findById(decoded.id);
+  if (!freshUser) {
+    return next(
+      new AppError('The user beloging to this token no loger exist ', 401),
+    );
+  }
 
   //4) check if user changes password after the jwt was issued
   next();
