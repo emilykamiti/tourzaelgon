@@ -73,13 +73,22 @@ exports.protect = catchAsync(async (req, res, next) => {
   console.log(decoded);
 
   //3) check if the user still exists
-  const freshUser = await User.findById(decoded.id);
-  if (!freshUser) {
+  const currentUser = await User.findById(decoded.id);
+  if (!currentUser) {
     return next(
       new AppError('The user beloging to this token no loger exist ', 401),
     );
   }
 
   //4) check if user changes password after the jwt was issued
+  if (currentUser.changedPasswordAfter(decoded.iat)) {
+    return next(
+      new AppError('user recently changed password! please login again', 401),
+    );
+  }
+
+  //GRANT ACCESS TO PROTECTED ROUTE
+
+  req.user = currentUser;
   next();
 });
