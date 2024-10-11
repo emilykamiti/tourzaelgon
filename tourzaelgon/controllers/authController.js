@@ -16,6 +16,8 @@ exports.signup = catchAsync(async (req, res, next) => {
     email: req.body.email,
     password: req.body.password,
     passwordConfirm: req.body.passwordConfirm,
+    role: req.body.role,
+    // passwordChangedAt: req.body.passwordChangedAt,
   });
 
   const token = signToken(newUser._id);
@@ -76,7 +78,7 @@ exports.protect = catchAsync(async (req, res, next) => {
   const currentUser = await User.findById(decoded.id);
   if (!currentUser) {
     return next(
-      new AppError('The user beloging to this token no loger exist ', 401),
+      new AppError('The user beloging to this token no longer exist ', 401),
     );
   }
 
@@ -88,7 +90,20 @@ exports.protect = catchAsync(async (req, res, next) => {
   }
 
   //GRANT ACCESS TO PROTECTED ROUTE
-
   req.user = currentUser;
   next();
 });
+
+exports.restrictTo = (...roles) => {
+  return (req, res, next) => {
+    //roles ['admin', 'lead-guide'], role='user
+
+    if (!roles.includes(req.user.role)) {
+      return next(
+        new AppError('You do not have permission to perform this action', 403),
+      );
+    }
+
+    next();
+  };
+};
