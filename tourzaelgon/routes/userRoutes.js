@@ -8,7 +8,7 @@ const router = express.Router();
 router.post('/signup', authController.signup);
 router.post('/login', authController.login); //has nothing to do with the rest philosophy
 router.post('/forgotPassword', authController.forgotPassword);
-router.post('/resetPassword', authController.resetPassword);
+router.patch('/resetPassword/:token', authController.resetPassword);
 
 //! these are in the rest format
 router
