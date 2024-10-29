@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "name": "The Forest Hiker",
+    "name": "TheForestHiker",
     "duration": 5,
     "maxGroupSize": 25,
     "difficulty": "easy",
@@ -16,7 +16,7 @@
   },
   {
     "id": 1,
-    "name": "The Sea Explorer",
+    "name": "TheSeaExplorer",
     "duration": 7,
     "maxGroupSize": 15,
     "difficulty": "medium",
@@ -31,7 +31,7 @@
   },
   {
     "id": 2,
-    "name": "The Snow Adventurer",
+    "name": "TheSnowAdventurer",
     "duration": 4,
     "maxGroupSize": 10,
     "difficulty": "difficult",
@@ -46,7 +46,7 @@
   },
   {
     "id": 3,
-    "name": "The City Wanderer",
+    "name": "TheCityWanderer",
     "duration": 9,
     "maxGroupSize": 20,
     "difficulty": "easy",
@@ -61,7 +61,7 @@
   },
   {
     "id": 4,
-    "name": "The Park Camper",
+    "name": "TheParkCamper",
     "duration": 10,
     "maxGroupSize": 15,
     "difficulty": "medium",
@@ -76,7 +76,7 @@
   },
   {
     "id": 5,
-    "name": "The Sports Lover",
+    "name": "TheSportsLover",
     "duration": 14,
     "maxGroupSize": 8,
     "difficulty": "difficult",
@@ -91,7 +91,7 @@
   },
   {
     "id": 6,
-    "name": "The Wine Taster",
+    "name": "TheWineTaster",
     "duration": 5,
     "maxGroupSize": 8,
     "difficulty": "easy",
@@ -106,7 +106,7 @@
   },
   {
     "id": 7,
-    "name": "The Star Gazer",
+    "name": "TheStarGazer",
     "duration": 9,
     "maxGroupSize": 8,
     "difficulty": "medium",
@@ -121,7 +121,7 @@
   },
   {
     "id": 8,
-    "name": "The Northern Lights",
+    "name": "TheNorthernLights",
     "duration": 3,
     "maxGroupSize": 12,
     "difficulty": "easy",
