@@ -64,7 +64,6 @@ userSchema.pre('save', async function (next) {
   //delete the password confirm field
   this.passwordConfirm = undefined;
 
-  // this.passwordChangedAt = Date.now() - 1000;
   next();
 });
 

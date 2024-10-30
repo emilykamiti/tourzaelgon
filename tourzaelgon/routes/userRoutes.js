@@ -10,6 +10,11 @@ router.post('/login', authController.login); //has nothing to do with the rest p
 router.post('/forgotPassword', authController.forgotPassword);
 router.patch('/resetPassword/:token', authController.resetPassword);
 
+router.patch(
+  '/updateMyPassword',
+  authController.protect,
+  authController.updatePassword,
+);
 //! these are in the rest format
 router
   .route('/')
