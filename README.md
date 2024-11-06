@@ -66,3 +66,85 @@ The server sends the JWT back to the user.
 The user stores the JWT (usually in the browser's local storage or as a cookie) and includes it in the Authorization header in subsequent requests to the server. If you’re using Descope, you can change how the JWT is stored here, under Token Response Method.
 
 When the user sends a new request with the JWT, the server decodes the JWT, and verifies its signature. If the token is valid, the server processes the request and returns the appropriate response.
+
+# Data Modelling
+
+Embedding or referencing
+
+## when to embed and when to reference?
+
+### APRACTICAL FRAMEWORK
+
+#### Combine all 3 criteria to take decision
+
+1. Relationship types
+   look at the type o relationships that exist betweem data sets
+
+#### Emdedding
+
+- 1: FEW
+- 1:MANY
+
+#### Referencing
+
+- 1:MANY
+- 1:TON
+- MANY:MANY
+
+2. Data Access patterns
+   How often data is read and written
+
+#### Emdedding
+
+- Data is mostly read
+- Date doesnot change quickly
+- (movies+images)
+
+#### Referencing
+
+- Data is updated alot
+- (low read/write ratio)
+
+3. Data closeness
+   How much the data is related, how we want to query
+
+#### Emdedding
+
+-Data sets really belong together
+
+#### Referencing
+
+we frequently need to query both datasets on their own.
+
+# TYPES OF REFERENCING
+
+- Child referencing -
+  Best used on
+  1: Few relationships
+
+- Parent Refencing -
+  Best used on
+  1:ton
+  1:many relationships
+
+- Two-way referencing
+  Based used on
+  Many to many
+
+# SUMMARY
+
+- Structure your data to match the ways that you application queries and updates data.
+
+- In other words: identiy the questions that arise from your applications use cases first, and then model your data so that the questions can get answered in the most effecient way .
+
+- In general always avor embedding, unless there is a good reason to refernce instead of embedding
+
+- A 1:TON or MANY:MANY relationship is usually a good reason to refrence instead of embedding
+
+- Also, favor referncing whn data is updated alot and if you need to frequently access a dataset on its own:
+
+- Use embedding when data is mostly read but rarelt updated, and when two datasets belong intrinsically together
+
+- Dont allow arrays to grow indefinately. Therefore, if you need to nrmalize , use child referncing for 1:MANY relationshipd and parent reerncing for 1:TON relationships
+
+- Use two way referencng for MANY:MANY relationships
