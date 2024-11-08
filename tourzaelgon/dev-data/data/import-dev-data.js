@@ -24,7 +24,7 @@ mongoose
   });
 
 // READ JSON FILE
-const toursPath = `${__dirname}/tours-simple.json`;
+const toursPath = `${__dirname}/tours.json`;
 console.log('Tours JSON Path:', toursPath);
 const tours = JSON.parse(fs.readFileSync(toursPath, 'utf-8'));
 

@@ -148,3 +148,4 @@ we frequently need to query both datasets on their own.
 - Dont allow arrays to grow indefinately. Therefore, if you need to nrmalize , use child referncing for 1:MANY relationshipd and parent reerncing for 1:TON relationships
 
 - Use two way referencng for MANY:MANY relationships
+  ![alt text](<Screenshot from 2024-11-06 16-25-39.png>)
