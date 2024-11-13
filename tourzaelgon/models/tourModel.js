@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const slugify = require('slugify');
 // const validator = require('validator');
+const User = require('./userModel');
 
 const tourSchema = new mongoose.Schema(
   {
@@ -128,6 +129,13 @@ tourSchema.virtual('durationWeeks').get(function () {
 //DOCUMENT MIDDLEWARE: It runs before the save() and .create()
 tourSchema.pre('save', function (next) {
   this.slug = slugify(this.name, { lower: true });
+  next();
+});
+
+//embedding tour guides. interesting !!
+tourSchema.pre('save', async function (next) {
+  const guidesPromises = this.guides.map(async (id) => User.findById(id));
+  this.guides = await Promise.all(guidesPromises);
   next();
 });
 
