@@ -1,30 +1,47 @@
-const Review = require('../models/tourModel');
-const APIFeatures = require('../utils/apiFeatures');
+const Review = require('../models/reviewModel');
+// const APIFeatures = require('../utils/apiFeatures');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 
-exports.aliasTopReviews = (req, res, next) => {
-  req.query.limit = '5';
-  req.query.sort = '-ratingsAverage,price';
-  req.query.fields = 'name, price, ratingsAverage, summary, difficulty';
-  next();
-};
+// exports.aliasTopReviews = (req, res, next) => {
+//   req.query.limit = '5';
+//   next();
+// };
 
-exports.getAllTours = catchAsync(async (req, res, next) => {
+exports.getAllReviews = catchAsync(async (req, res, next) => {
   //EXECUTE QUERY
-  const features = new APIFeatures(Review.find(), req.query)
-    .filter()
-    .sort()
-    .limitFields()
-    .paginate();
-  const tours = await features.query;
+  const reviews = await Review.find();
 
   //SEND RESPONSE
   res.status(200).json({
     status: 'success',
-    results: tours.length,
+    results: reviews.length,
     data: {
-      tours,
+      reviews,
     },
+  });
+});
+
+exports.createReview = catchAsync(async (req, res, next) => {
+  const newReview = await Review.create(req.body);
+
+  res.status(201).json({
+    status: 'success',
+    data: {
+      review: newReview,
+    },
+  });
+});
+
+exports.deleteReview = catchAsync(async (req, res, next) => {
+  const review = await Review.findByIdAndDelete(req.params.id);
+
+  if (!review) {
+    return next(new AppError('No review found with that ID', 404));
+  }
+
+  res.status(204).json({
+    status: 'success',
+    data: null,
   });
 });
