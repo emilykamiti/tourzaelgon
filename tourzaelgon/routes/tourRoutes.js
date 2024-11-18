@@ -4,6 +4,15 @@ const authController = require('../controllers/authController');
 const reviewRouter = require('../routes/reviewRoutes');
 
 const router = express.Router();
+// POST /tour/234fad4/reviews //!nested route
+
+// router
+//   .route('/:tourId/reviews')
+//   .post(
+//     authController.protect,
+//     authController.restrictTo('user'),
+//     reviewController.createReview,
+//   );
 
 router.use('/:tourId/reviews', reviewRouter);
 
@@ -33,16 +42,6 @@ router
     authController.restrictTo('admin', 'lead-guide'),
     tourController.deleteTour,
   );
-
-// POST /tour/234fad4/reviews //!nested route
-
-// router
-//   .route('/:tourId/reviews')
-//   .post(
-//     authController.protect,
-//     authController.restrictTo('user'),
-//     reviewController.createReview,
-//   );
 
 module.exports = router;
 
