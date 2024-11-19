@@ -1,7 +1,7 @@
 const express = require('express');
 const tourController = require('../controllers/tourController');
 const authController = require('../controllers/authController');
-const reviewRouter = require('../routes/reviewRoutes');
+const reviewRouter = require('./reviewRoutes');
 
 const router = express.Router();
 // POST /tour/234fad4/reviews //!nested route
@@ -37,6 +37,7 @@ router
     authController.restrictTo('admin', 'lead-guide'),
     tourController.updateTour,
   )
+
   .delete(
     authController.protect,
     authController.restrictTo('admin', 'lead-guide'),
