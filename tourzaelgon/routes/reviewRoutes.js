@@ -12,6 +12,7 @@ router
   .post(
     authController.protect,
     authController.restrictTo('user'),
+    reviewController.setTourUserIds,
     reviewController.createReview,
   );
 
@@ -22,5 +23,11 @@ router
     authController.restrictTo('admin', 'lead-guide'),
     reviewController.deleteReview,
   );
+
+router.route('/:id').patch(
+  authController.protect,
+  // authController.restrictTo('user'),
+  reviewController.updateReview,
+);
 
 module.exports = router;
