@@ -11,7 +11,7 @@
   {
     "_id": "5c8a1dfa2f8fb814b56fa181",
     "name": "Lourdes Browning",
-    "email": "loulou@example.com",
+    "email": "loulou@gmail.com",
     "role": "user",
     "active": true,
     "photo": "user-2.jpg",
@@ -20,7 +20,7 @@
   {
     "_id": "5c8a1e1a2f8fb814b56fa182",
     "name": "Sophie Louise Hart",
-    "email": "sophie@example.com",
+    "email": "sophie@gmail.com",
     "role": "user",
     "active": true,
     "photo": "user-3.jpg",
@@ -29,7 +29,7 @@
   {
     "_id": "5c8a1ec62f8fb814b56fa183",
     "name": "Ayla Cornell",
-    "email": "ayls@example.com",
+    "email": "ayls@gmail.com",
     "role": "user",
     "active": true,
     "photo": "user-4.jpg",
@@ -38,7 +38,7 @@
   {
     "_id": "5c8a1f292f8fb814b56fa184",
     "name": "Leo Gillespie",
-    "email": "leo@example.com",
+    "email": "leo@gmail.com",
     "role": "guide",
     "active": true,
     "photo": "user-5.jpg",
@@ -47,7 +47,7 @@
   {
     "_id": "5c8a1f4e2f8fb814b56fa185",
     "name": "Jennifer Hardy",
-    "email": "jennifer@example.com",
+    "email": "jennifer@gmail.com",
     "role": "guide",
     "active": true,
     "photo": "user-6.jpg",
@@ -56,7 +56,7 @@
   {
     "_id": "5c8a201e2f8fb814b56fa186",
     "name": "Kate Morrison",
-    "email": "kate@example.com",
+    "email": "kate@gmail.com",
     "role": "guide",
     "active": true,
     "photo": "user-7.jpg",
@@ -65,7 +65,7 @@
   {
     "_id": "5c8a20d32f8fb814b56fa187",
     "name": "Eliana Stout",
-    "email": "eliana@example.com",
+    "email": "eliana@gmail.com",
     "role": "user",
     "active": true,
     "photo": "user-8.jpg",
@@ -74,7 +74,7 @@
   {
     "_id": "5c8a211f2f8fb814b56fa188",
     "name": "Cristian Vega",
-    "email": "chris@example.com",
+    "email": "chris@gmail.com",
     "role": "user",
     "active": true,
     "photo": "user-9.jpg",
@@ -83,7 +83,7 @@
   {
     "_id": "5c8a21d02f8fb814b56fa189",
     "name": "Steve T. Scaife",
-    "email": "steve@example.com",
+    "email": "steve@gmail.com",
     "role": "lead-guide",
     "active": true,
     "photo": "user-10.jpg",
@@ -92,7 +92,7 @@
   {
     "_id": "5c8a21f22f8fb814b56fa18a",
     "name": "Aarav Lynn",
-    "email": "aarav@example.com",
+    "email": "aarav@gmail.com",
     "role": "lead-guide",
     "active": true,
     "photo": "user-11.jpg",
@@ -101,7 +101,7 @@
   {
     "_id": "5c8a22c62f8fb814b56fa18b",
     "name": "Miyah Myles",
-    "email": "miyah@example.com",
+    "email": "miyah@gmail.com",
     "role": "lead-guide",
     "active": true,
     "photo": "user-12.jpg",
@@ -110,7 +110,7 @@
   {
     "_id": "5c8a23412f8fb814b56fa18c",
     "name": "Ben Hadley",
-    "email": "ben@example.com",
+    "email": "ben@gmail.com",
     "role": "guide",
     "active": true,
     "photo": "user-13.jpg",
@@ -119,7 +119,7 @@
   {
     "_id": "5c8a23c82f8fb814b56fa18d",
     "name": "Laura Wilson",
-    "email": "laura@example.com",
+    "email": "laura@gmail.com",
     "role": "user",
     "active": true,
     "photo": "user-14.jpg",
@@ -128,7 +128,7 @@
   {
     "_id": "5c8a23de2f8fb814b56fa18e",
     "name": "Max Smith",
-    "email": "max@example.com",
+    "email": "max@gmail.com",
     "role": "user",
     "active": true,
     "photo": "user-15.jpg",
@@ -137,7 +137,7 @@
   {
     "_id": "5c8a24282f8fb814b56fa18f",
     "name": "Isabel Kirkland",
-    "email": "isabel@example.com",
+    "email": "isabel@gmail.com",
     "role": "user",
     "active": true,
     "photo": "user-16.jpg",
@@ -146,7 +146,7 @@
   {
     "_id": "5c8a24402f8fb814b56fa190",
     "name": "Alexander Jones",
-    "email": "alex@example.com",
+    "email": "alex@gmail.com",
     "role": "user",
     "active": true,
     "photo": "user-17.jpg",
@@ -155,7 +155,7 @@
   {
     "_id": "5c8a245f2f8fb814b56fa191",
     "name": "Eduardo Hernandez",
-    "email": "edu@example.com",
+    "email": "edu@gmail.com",
     "role": "user",
     "active": true,
     "photo": "user-18.jpg",
@@ -164,7 +164,7 @@
   {
     "_id": "5c8a24822f8fb814b56fa192",
     "name": "John Riley",
-    "email": "john@example.com",
+    "email": "john@gmail.com",
     "role": "user",
     "active": true,
     "photo": "user-19.jpg",
@@ -173,7 +173,7 @@
   {
     "_id": "5c8a24a02f8fb814b56fa193",
     "name": "Lisa Brown",
-    "email": "lisa@example.com",
+    "email": "lisa@gmail.com",
     "role": "user",
     "active": true,
     "photo": "user-20.jpg",
