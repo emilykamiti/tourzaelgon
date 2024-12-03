@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, 'Please tell us your name'],
-    validate: [validator.isAlpha, 'user name must only contain characters'],
+    // validate: [validator.isAlpha, 'user name must only contain characters'],
   },
 
   email: {
