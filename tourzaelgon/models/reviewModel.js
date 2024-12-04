@@ -1,4 +1,3 @@
-// review/rating/cretedAt/ref to tour/ref to the user
 const mongoose = require('mongoose');
 const Tour = require('./tourModel');
 
@@ -80,6 +79,7 @@ reviewSchema.post('save', function () {
   this.constructor.calcAverageRatings(this.tour);
 });
 
+//! Part to study about, abit confusing
 reviewSchema.pre(/^findOneAnd/, async function (next) {
   const query = this.getQuery();
   this.r = await this.model.findOne(query);
@@ -87,7 +87,8 @@ reviewSchema.pre(/^findOneAnd/, async function (next) {
 });
 
 reviewSchema.post(/^findOneAnd/, async function (next) {
-  //this.r = await this.findOne(); does not work here the query has already been executed
+  //this.r = await this.findOne();
+  //Does not work here the query has already been executed
   await this.r.constructor.calcAverageRatings(this.r.tour);
 });
 
