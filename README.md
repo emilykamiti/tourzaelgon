@@ -73,7 +73,7 @@ Embedding or referencing
 
 ## when to embed and when to reference?
 
-### APRACTICAL FRAMEWORK
+### A practical framework
 
 #### Combine all 3 criteria to take decision
 
@@ -116,7 +116,7 @@ Embedding or referencing
 
 we frequently need to query both datasets on their own.
 
-# TYPES OF REFERENCING
+# Types of reerencing
 
 - Child referencing -
   Best used on
@@ -131,7 +131,7 @@ we frequently need to query both datasets on their own.
   Based used on
   Many to many
 
-# SUMMARY
+# Summary .
 
 - Structure your data to match the ways that you application queries and updates data.
 
