@@ -9,6 +9,7 @@ router.post('/signup', authController.signup);
 
 //? Has nothing to do with the rest philosophy
 router.post('/login', authController.login);
+router.get('/logout', authController.logout);
 router.post('/forgotPassword', authController.forgotPassword);
 router.patch('/resetPassword/:token', authController.resetPassword);
 
@@ -20,7 +21,7 @@ router.patch('/updateMyPassword', authController.updatePassword);
 router.patch('/updateMe', userController.updateMe);
 router.delete('/deleteMe', userController.deleteMe);
 
-//! only the admin can acces the routes below
+//! only the admin can access the routes below
 router.use(authController.restrictTo('admin'));
 router
   .route('/')
