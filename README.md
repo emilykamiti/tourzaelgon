@@ -51,9 +51,9 @@ JWTs work by encoding a set of claims into a compact, URL-safe string. This stri
 
 ## jwt is like a passoprt, real life example
 
-- think about someone who want to travel they need a passwort.
+- Think about someone who wants to travel, they need a passport.
 
-one has a national id , all they need is input the information on the id into the system to comfirm identicatoin and there after the system analyses this info and finds the person corrrecty identifies , so they process a passport which the applicant applied for in relation to the identiication initals put and then receive it and only if it its accurate and then proceed to the immigratioin office where the passport is handed for comfirmation and then given the rights to board the plane to their destination.
+One has a national id , all they need is input the information on the id into the system to comfirm identicatoin of a person as a citizen and there after the system analyses this info and finds the person corrrecty identifies. So they process a passport which the applicant applied for in relation to the identiication initals put and then receive the passport only and only if its accurate and then proceed to the immigratioin office where the passport is handed for comfirmation and then given the rights to board the plane/bus to their destination.
 
 ## programig example
 
