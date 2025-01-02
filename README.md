@@ -116,7 +116,7 @@ Embedding or referencing
 
 we frequently need to query both datasets on their own.
 
-# Types of reerencing
+# Types of referencing
 
 - Child referencing -
   Best used on
